@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">TODO LIST</div>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="container">
+            <div class="main-header">
+                <form action="" id="form-task">
+                    <div>
+                        <input type="text" placeholder="Enter to text" id="input-task">
+                        <span>Error text</span>
+                    </div>
+                    <button class="btn btn-solid">Add task</button> 
+                </form>
+            </div>
+            <div class="time-section">
+                <div class="time">00:00:00</div>
+                <div class="date"></div>
+            </div>
+            <ul>
+                <!-- List item -->
+            </ul>
+        </div>
+    </section>
+    <div class="modal hidden" id="modal">
+        <div class="modal-header">
+            <span>Updated Todo</span>
+            <i class='bx bx-x' id="close"></i>
+        </div>
+        <div class="modal-content">
+            <form id="form-edit">
+                <input type="text" placeholder="Enter the update todo" id="input-edit">
+                <span style="display: none; color: red;">Error</span>
+                <div>
+                    <button class="btn btn-solid">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="overlay hidden" id="overlay"></div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
