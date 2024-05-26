@@ -142,14 +142,19 @@ function closeModals() {
 close.addEventListener('click', closeModals)
 overlay.addEventListener('click', closeModals)
 
-inputEdit.addEventListener("keyup", () => {
-    if(regEx.test(inputEdit.value) && inputEdit.value.trim().length > 2) {
-        inputEdit.style.borderColor = "green"
-    }
-    else{
-        inputEdit.style.borderColor = "red"
-    }
-})
+// Input RegEx Test function
+function inputKeyup(input) {
+    input.addEventListener('keyup', () => {
+        if(regEx.test(input.value) && input.value.trim().length > 2) {
+            input.style.borderColor = "green"
+        }
+        else{
+            input.style.borderColor = "red"
+        }
+    })
+}
+inputKeyup(inputTask)
+inputKeyup(inputEdit)
 
 formEdit.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -164,14 +169,7 @@ formEdit.addEventListener('submit', (e) => {
     }   
 })
 
-inputTask.addEventListener("keyup", () => {
-    if(regEx.test(inputTask.value) && inputTask.value.trim().length > 2) {
-        inputTask.style.borderColor = "green"
-    }
-    else{
-        inputTask.style.borderColor = "red"
-    }
-})
+
 
 formTask.addEventListener("submit", (e) => {
     e.preventDefault()
