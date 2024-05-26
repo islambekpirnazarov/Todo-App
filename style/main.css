@@ -7,6 +7,7 @@
     font-weight: 400;
     font-family: 'Montserrat';
 }
+
 .container{
     width: 75%;
     margin: 0 auto;
@@ -51,6 +52,57 @@ header .header-content{
     font-size: 40px;
     font-weight: 700;
     color: #555;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+header .theme{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    color: #333;
+}
+header .theme:active{
+    transform: scale(0.9);
+}
+body.dark-light{
+    background-color: #0f0225;
+}
+body.dark-light .btn{
+    background-color: #180634;
+}
+body.dark-light .main-content .date{
+    color: #fff;
+}
+body.dark-light .header-content,
+body.dark-light .main-content ul{
+    color: #fff;
+}
+body.dark-light .main-content ul{
+    background-color: #170732;
+}
+body.dark-light .main-content ul li{
+    background-color: #22094e;
+    color: #fff;
+}
+body.dark-light .btn-solid{
+    background-color: rgb(56, 56, 212);
+}
+body.dark-light .main-content ul li h2{
+    color: #fff;
+}
+
+body.dark-light ul li .task-text .checkbox{
+    color: transparent;
+}
+body.dark-light ul li .task-text .checkbox.active{
+    color: #fff;
+}
+header .theme i{
+    font-size: 25px;
 }
 .main-content{
     margin-top: 50px;

@@ -8,8 +8,19 @@ const overlay = document.querySelector("#overlay")
 const close = document.querySelector("#close")
 const formEdit = document.querySelector("#form-edit")
 const inputEdit = document.querySelector("#input-edit")
+const theme = document.querySelector("#theme")
+const sun = document.querySelector(".sun")
+const moon = document.querySelector(".moon")
 let updateTaskId;
 const regEx = /^.{3,40}$/
+
+// Theme
+theme.addEventListener("click", () => {
+    document.body.classList.toggle("dark-light")
+    moon.classList.toggle("hidden")
+    sun.classList.toggle("hidden")
+
+})
 
 // Array Todo
 let todos = []
